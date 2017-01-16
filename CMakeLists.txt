@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT(imgbin)
+
+find_package(OpenCV REQUIRED )
+set(CMAKE_CXX_FLAGS "-std=c++0x")
+INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )
+link_directories( ${CMAKE_BINARY_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+add_executable( otsu src/models/otsu.cpp ${NAME_HEADERS} )
+add_executable( ada src/models/adaptive.cpp ${NAME_HEADERS} )
+
+target_link_libraries( otsu ${OpenCV_LIBS} )
+target_link_libraries( ada ${OpenCV_LIBS} )
