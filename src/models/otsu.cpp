@@ -3,7 +3,7 @@
 * @Author: daemonslayer
 * @Date:   2017-01-16T15:36:21+05:30
 * @Last modified by:   daemonslayer
-* @Last modified time: 2017-01-16T18:46:05+05:30
+* @Last modified time: 2017-01-16T21:58:55+05:30
 */
 
 
@@ -23,9 +23,9 @@ using namespace cv;
 
 
 int main(int argc, char const *argv[]) {
-  title("Text Extractor");
+  title("Text Extractor : Otsu");
   string win_name = "textextractor";
-  
+
   Mat img_a;
   img_a = imread("../input/sample.jpg");
 
@@ -51,7 +51,7 @@ int main(int argc, char const *argv[]) {
   Mat img_a_thres;
   threshold(img_a_blur, img_a_thres, 0, 255, THRESH_OTSU);
   stat_comp("otsu threshold");
-  
+
   fastNlMeansDenoising(img_a_thres, img_a_thres, 3, 7, 21);
   stat_comp("denoising image");
 

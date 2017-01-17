@@ -8,6 +8,8 @@ link_directories( ${CMAKE_BINARY_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 add_executable( otsu src/models/otsu.cpp ${NAME_HEADERS} )
 add_executable( ada src/models/adaptive.cpp ${NAME_HEADERS} )
+add_executable( ft src/models/feng_tan.cpp ${NAME_HEADERS} )
 
 target_link_libraries( otsu ${OpenCV_LIBS} )
 target_link_libraries( ada ${OpenCV_LIBS} )
+target_link_libraries( ft ${OpenCV_LIBS} )

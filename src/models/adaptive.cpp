@@ -2,7 +2,7 @@
 * @Author: daemonslayer
 * @Date:   2017-01-16T15:36:21+05:30
 * @Last modified by:   daemonslayer
-* @Last modified time: 2017-01-16T21:46:23+05:30
+* @Last modified time: 2017-01-16T21:58:48+05:30
 */
 
 
@@ -22,7 +22,7 @@ using namespace cv;
 
 
 int main(int argc, char const *argv[]) {
-  title("Text Extractor");
+  title("Text Extractor : Adaptive");
   string win_name = "textextractor";
 
   Mat img_b;
